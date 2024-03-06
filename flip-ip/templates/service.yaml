@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ .Values.fullnameOverride }}
+  namespace: {{ .Values.fullnameOverride }}
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}
 spec:
   selector:
     name: {{ .Values.fullnameOverride }}
