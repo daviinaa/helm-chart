@@ -11,7 +11,7 @@ spec:
       targetPort: {{ .Values.containerPort }}
   {{- $service := .Values.service | default dict }}
   {{- if $service }}
-      port: {{ $service.port | default 80 }}
+      port: {{ Values.service.port | default 80 }}
   type: {{ $service.type | default "ClusterIP" | quote }}
   {{- else }}
       port: 80

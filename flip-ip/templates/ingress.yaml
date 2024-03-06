@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ .Values.projectName }}-service
+                name: {{ .Values.fullnameOverride }}
                 port:
-                  number: {{ .Values.servicePort | default 80 }}
+                  number: {{ Values.service.port | default 80 }}
