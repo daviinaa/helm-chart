@@ -7,13 +7,13 @@ spec:
   ingressClassName: nginx
   rules:
     - host: "{{ .Values.ingress.host }}.divineanthony.com"
-      - http:
-          paths:
-            - backend:
-                service:
-                  name: {{ .Values.fullnameOverride}}
-                  port:
-                  {{- $service := .Values.service | default dict }}
-                    number: {{ $service.port | default 80 }}
-              path: /
-              pathType: Prefix
+      http:
+        paths:
+          - backend:
+              service:
+                name: {{ .Values.fullnameOverride}}
+                port:
+                {{- $service := .Values.service | default dict }}
+                  number: {{ $service.port | default 80 }}
+            path: /
+            pathType: Prefix
