@@ -15,4 +15,4 @@ spec:
               service:
                 name: {{ .Values.fullnameOverride }}
                 port:
-                  number: {{ .Values.service.port | default 80 }}
+                  number: 80

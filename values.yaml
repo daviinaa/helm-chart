@@ -1,0 +1,15 @@
+fullnameOverride: flip-test
+image:
+  repository: nginx 
+namespace: flip
+containerPort: 3000
+managedidentity:
+    enabled: true
+autoscaling:
+    enabled: true
+ingress:
+  host: reversess.divineanthony.com
+lProbe:
+    enabled: false
+rProbe:
+    enabled: false
