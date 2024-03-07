@@ -44,7 +44,7 @@ spec:
         {{- $resources := .Values.resources | default dict }}
         {{- if $resources }}
           requests:
-            cpu: {{ $resources.requests.cpu | default "0.25" | quote}}
+            cpu: {{ $resources.requests.cpu | default "0.2" | quote}}
             memory: {{ $resources.requests.memory | default "500Mi" | quote}} 
             ephemeral-storage: 200Mi 
           limits:
@@ -61,5 +61,3 @@ spec:
             memory: 1Gi
             ephemeral-storage: 1Gi
         {{- end }}
-
-
