@@ -11,4 +11,3 @@ spec:
     - name: http
       port: 80
       targetPort: {{ .Values.containerPort | default 80 }}
-  type: NodePort
