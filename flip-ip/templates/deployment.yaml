@@ -48,16 +48,16 @@ spec:
             memory: {{ $resources.requests.memory | default "500Mi" | quote}} 
             ephemeral-storage: 200Mi 
           limits:
-            cpu: {{ $resources.limits.cpu | default "0.5" | quote}}
-            memory: {{ $resources.limits.memory | default "1Gi" | quote}}
+            cpu: {{ $resources.limits.cpu | default "0.25" | quote}}
+            memory: {{ $resources.limits.memory | default "512Mi" | quote}}
             ephemeral-storage: 1Gi 
         {{- else }}
           requests:
-            cpu: 0.2
-            memory: 500Mi
+            cpu: 0.25
+            memory: 512Mi
             ephemeral-storage: 200Mi
           limits:
-            cpu: 0.5
-            memory: 1Gi
-            ephemeral-storage: 1Gi
+            cpu: 0.25
+            memory: 500Mi
+            ephemeral-storage: 200Mi
         {{- end }}
