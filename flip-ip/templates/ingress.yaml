@@ -4,14 +4,14 @@ metadata:
   name: {{ .Values.fullnameOverride }}
   namespace: {{ .Values.namespace }}
   annotations:
-    kubernetes.io/ingress.class: "gce-internal"
+    kubernetes.io/ingress.class: "gce"
 spec:
   rules:
     - host: {{ .Values.ingress.host }}
       http:
         paths:
           - path: /
-            pathType: ImplemantationSpecific
+            pathType: ImplementationSpecific
             backend:
               service:
                 name: {{ .Values.fullnameOverride }}
