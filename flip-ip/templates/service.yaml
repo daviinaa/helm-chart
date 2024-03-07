@@ -6,9 +6,9 @@ metadata:
   #   cloud.google.com/neg: '{"ingress": false}'
 spec:
   selector:
-    app: {{ .Values.fullnameOverride }}
+    app : {{ .Values.fullnameOverride }}
   ports:
     - name: http
       port: 80
       targetPort: {{ .Values.containerPort | default 80 }}
-  type: LoadBalancer
+  type: NodePort
