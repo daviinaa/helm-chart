@@ -3,9 +3,9 @@ entries:
   flip-ip:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T02:42:18.81464+01:00"
+    created: "2024-03-07T02:48:09.774823+01:00"
     description: A Helm chart for Kubernetes
-    digest: 1e8873011546265127c51674108c457078f39748943af4f775523e8e97a88413
+    digest: 72739cabc978e4f22f80e1da89542fc118861698e3a432261f741774e0b319cd
     name: flip-ip
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T02:42:18.814294+01:00"
+    created: "2024-03-07T02:48:09.774552+01:00"
     description: A Helm chart for Kubernetes
     digest: 6a37e0a023adab331ebfa663e79803e1f00397a7b22c84c27cc0b01a1096021e
     name: flip-ip
@@ -21,4 +21,4 @@ entries:
     urls:
     - flip-ip-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-07T02:42:18.811736+01:00"
+generated: "2024-03-07T02:48:09.77297+01:00"
