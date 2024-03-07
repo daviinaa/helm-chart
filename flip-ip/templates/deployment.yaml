@@ -40,24 +40,28 @@ spec:
           {{- toYaml . | nindent 10 }}
         {{- end }}
         {{- end }}
-        resources:
-        {{- $resources := .Values.resources | default dict }}
-        {{- if $resources }}
-          requests:
-            cpu: {{ $resources.requests.cpu | default "0.2" | quote}}
-            memory: {{ $resources.requests.memory | default "500Mi" | quote}} 
-            ephemeral-storage: 200Mi 
-          limits:
-            cpu: {{ $resources.limits.cpu | default "0.5" | quote}}
-            memory: {{ $resources.limits.memory | default "1Gi" | quote}}
-            ephemeral-storage: 1Gi 
-        {{- else }}
-          requests:
-            cpu: 0.2
-            memory: 500Mi
-            ephemeral-storage: 200Mi
-          limits:
-            cpu: 0.5
-            memory: 1Gi
-            ephemeral-storage: 1Gi
-        {{- end }}
+        # resources:
+        # {{- $resources := .Values.resources | default dict }}
+        # {{- if $resources }}
+        #   requests:
+        #     cpu: {{ $resources.requests.cpu | default "0.25" | quote}}
+        #     memory: {{ $resources.requests.memory | default "500Mi" | quote}} 
+        #     ephemeral-storage: 200Mi 
+        #   limits:
+        #     cpu: {{ $resources.limits.cpu | default "0.5" | quote}}
+        #     memory: {{ $resources.limits.memory | default "1Gi" | quote}}
+        #     ephemeral-storage: 1Gi 
+        # {{- else }}
+        #   requests:
+        #     cpu: 0.2
+        #     memory: 500Mi
+        #     ephemeral-storage: 200Mi
+        #   limits:
+        #     cpu: 0.5
+        #     memory: 1Gi
+        #     ephemeral-storage: 1Gi
+        # {{- end }}
+
+
+me - {"cpu":0.5,"ephemeral-storage":"1Gi","memory":"1Gi"},"requests":{"cpu":0.2,"ephemeral-storage":"200Mi","memory":"500Mi"
+auto- {"input":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"1Gi"},"requests":{"cpu":"200m","ephemeral-storage":"200Mi","memory":"500Mi"},"name":"flip-app"}]},"output":{"containers":[{"limits":{"cpu":"250m","ephemeral-storage":"200Mi","memory":"512Mi"},"requests":{"cpu":"250m","ephemeral-storage":"200Mi","memory":"512Mi"},"name":"flip-app"}]},"modified":true}
