@@ -11,7 +11,7 @@ spec:
       http:
         paths:
           - path: /
-            pathType: Prefix
+            pathType: ImplemantationSpecific
             backend:
               service:
                 name: {{ .Values.fullnameOverride }}
