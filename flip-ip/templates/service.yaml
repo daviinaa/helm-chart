@@ -5,7 +5,6 @@ metadata:
   # annotations:
   #   cloud.google.com/neg: '{"ingress": false}'
 spec:
-  type: ClusterIP
   selector:
     app : {{ .Values.fullnameOverride }}
   ports:
